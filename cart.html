@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vastra - Cart</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+  </head>
+  <body>
+    <section id="header">
+      <a href="index.html"><img src="images/logo.png" class="logo" alt="Logo" /></a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li id="lg-bag">
+            <a class="active" href="cart.html"><i class="far fa-shopping-bag"></i></a>
+          </li>
+          <a href="#" id="close"><i class="far fa-times"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+      <h2>#ReachOut</h2>
+      <p>Got something to say? We're here.</p>
+    </section>
+
+    <section id="cart" class="section-p1">
+      <div id="cart-content">
+        <table id="cart-table">
+          <thead>
+            <tr>
+              <th>Remove</th>
+              <th>Image</th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Size</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody id="cart-body">
+            <!-- Cart rows will be populated by JS -->
+          </tbody>
+        </table>
+        <p class="empty-cart" id="empty-cart-message">Your cart is empty.</p>
+        <div class="cart-total" id="cart-total-section">
+          <p>Total: ₹<span id="cart-total">0</span></p>
+          <button class="checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section-p1">
+      <div class="col">
+        <img class="logo" src="images/logo.png" alt="Logo" width="180px" />
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> 112 Sri Nivasam, Tungalam, Visakhapatnam</p>
+        <p><strong>Phone:</strong> +01 2222 365 / (+91) 01 2345 6789</p>
+        <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+        <div class="follow">
+          <h4>Follow us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+      </div>
+
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+
+      <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+          <img src="images/pay/app.jpg" alt="App Store" />
+          <img src="images/pay/play.jpg" alt="Google Play" />
+        </div>
+        <p>Secured Payment Gateways</p>
+        <img src="images/pay/pay.png" alt="Payment Gateways" />
+      </div>
+
+      <div class="copyright">
+        <p>© 2025, Made by Ankit Kumar Gupta (+91-7386862346)</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

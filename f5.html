@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vastra</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+  </head>
+  <body>
+    <section id="header">
+      <a href="index.html"><img src="images/logo.png" class="logo" alt="Logo" /></a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li id="lg-bag">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+          </li>
+          <a href="#" id="close"><i class="far fa-times"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
+
+    <section id="prodetails" class="section-p1">
+      <div class="single-pro-image">
+        <img src="images/products/f5a.jpg" width="100%" id="MainImg" alt="Product Image" />
+        <div class="small-img-group">
+          <div class="small-img-col"><img src="images/products/f5a.jpg" width="100%" class="small-img" alt="" /></div>
+          <div class="small-img-col"><img src="images/products/f5b.jpg" width="100%" class="small-img" alt="" /></div>
+          <div class="small-img-col"><img src="images/products/f5c.jpg" width="100%" class="small-img" alt="" /></div>
+          <div class="small-img-col"><img src="images/products/f5d.jpg" width="100%" class="small-img" alt="" /></div>
+        </div>
+      </div>
+
+      <div class="single-pro-details">
+        <h6>Hubberholme</h6>
+        <h4>Men's Oversized Casual Shirt</h4>
+        <h2>₹897</h2>
+
+        <select id="product-size">
+          <option>Select Size</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+        </select>
+
+        <input type="number" value="1" min="1" id="product-qty" />
+        <button class="normal add-to-cart"
+          data-name="Men's Oversized Casual Shirt"
+          data-price="897"
+          data-image="images/products/f5a.jpg">
+          Add To Cart
+        </button>
+
+        <h4>Product Details</h4>
+        <span>
+          The Hubberholme Men's Summer Cotton Oversized Casual Shirt is designed for comfort and style. Made from breathable cotton, perfect for casual wear.
+        </span>
+      </div>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+        <h4>Sign Up For Newsletters</h4>
+        <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+      </div>
+      <div class="form">
+        <input type="text" placeholder="Your email address" />
+        <button class="normal">Sign Up</button>
+      </div>
+    </section>
+
+    <footer class="section-p1">
+      <div class="col">
+        <img class="logo" src="images/logo.png" alt="Logo" width="180px" />
+        <h4>Contact</h4>
+        <p><strong>Address: </strong>112 Sri Nivasam, Tungalam, Visakhapatnam</p>
+        <p><strong>Phone: </strong> +01 2222 365 / (+91) 01 2345 6789</p>
+        <p><strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
+        <div class="follow">
+          <h4>Follow us</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact Us</a>
+      </div>
+
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+
+      <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+          <img src="images/pay/app.jpg" alt="App Store" />
+          <img src="images/pay/play.jpg" alt="Google Play" />
+        </div>
+        <p>Secured Payment Gateways</p>
+        <img src="images/pay/pay.png" alt="Payment Gateways" />
+      </div>
+
+      <div class="copyright">
+        <p>© 2025, Made by Ankit Kumar Gupta</p>
+      </div>
+    </footer>
+
+    <script>
+      var MainImg = document.getElementById("MainImg");
+      var smallimg = document.getElementsByClassName("small-img");
+      for (let i = 0; i < smallimg.length; i++) {
+        smallimg[i].onclick = function () {
+          MainImg.src = smallimg[i].src;
+        };
+      }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const addBtn = document.querySelector(".add-to-cart");
+        if (addBtn) {
+          addBtn.addEventListener("click", () => {
+            const selectedSize = document.getElementById("product-size").value;
+            if (selectedSize === "Select Size") {
+              alert("Please select a size!");
+              return;
+            }
+
+            const product = {
+              id: parseInt(addBtn.dataset.id),
+              name: addBtn.dataset.name,
+              price: parseInt(addBtn.dataset.price),
+              image: addBtn.dataset.image,
+              quantity: parseInt(document.getElementById("product-qty").value) || 1,
+              size: selectedSize
+            };
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const existing = cart.find(item => item.id === product.id && item.size === product.size);
+            if (existing) {
+              existing.quantity += product.quantity;
+            } else {
+              cart.push(product);
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert("Added to cart!");
+          });
+        }
+      });
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
